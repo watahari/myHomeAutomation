@@ -48,3 +48,10 @@ services:
       - DISCORD_AVATAR_URL
       - VERBOSE
     restart: always
+  # request from amazon-dash
+  simple-last-time-api-last-tooked-medicine:
+    image: watahari/simple-last-time-api
+    container_name: simple-last-time-api-last-tooked-medicine
+    restart: always
+#    ports:
+#      - 8081:8080
