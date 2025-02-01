@@ -61,6 +61,16 @@ services:
       - VERBOSE
     restart: always
 
+  amazon-dash:
+    # image: nekmo/amazon-dash
+    #   is not support linux/amd64
+    image: grewhit25/amazon-dash
+    container_name: amazon-dash
+    volumes:
+      - ./amazon-dash/amazon-dash.yml:/config/amazon-dash.yml
+    network_mode: "host"
+    restart: always
+
   # request from amazon-dash
   simple-last-time-api-last-tooked-medicine:
     image: watahari/simple-last-time-api

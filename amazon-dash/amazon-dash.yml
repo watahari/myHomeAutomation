@@ -1,0 +1,9 @@
+# amazon-dash.yml
+# ---------------
+settings:
+  delay: 10
+devices:
+  68:37:e9:7c:7a:75:
+    name: tookMedicineV2
+    url: 'http://pi5:8081/timestamp'
+    method: post
