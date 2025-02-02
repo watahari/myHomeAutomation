@@ -22,3 +22,16 @@ scrape_configs:
     static_configs:
       - targets:
         - simple-last-time-api-last-tooked-medicine:8080
+  - job_name: 'switchbot'
+    scrape_interval: 5m # not to reach API rate limit
+    metrics_path: /metrics
+    http_sd_configs:
+    - url: http://switchbot-exporter:8080/discover
+      refresh_interval: 1d # no need to check for new devices very often
+    relabel_configs:
+      - source_labels: [__address__]
+        target_label: __param_target
+      - source_labels: [__param_target]
+        target_label: instance
+      - target_label: __address__
+        replacement: switchbot-exporter:8080

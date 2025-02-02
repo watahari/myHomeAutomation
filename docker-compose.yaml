@@ -23,6 +23,18 @@ services:
       - 9100:9100
     restart: always
 
+  switchbot-exporter:
+    # image: nasa9084/switchbot-exporter
+    #   is not support linux/amd64
+    image: watahari/switchbot-exporter
+    container_name: switchbot-exporter
+    ports:
+      - 9101:8080
+    restart: always
+    environment:
+      - SWITCHBOT_OPENTOKEN
+      - SWITCHBOT_SECRETKEY
+
   grafana:
     image: grafana/grafana
     container_name: grafana
