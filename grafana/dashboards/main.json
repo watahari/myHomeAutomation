@@ -594,12 +594,16 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green",
+                "color": "purple",
                 "value": null
               },
               {
+                "color": "green",
+                "value": 18
+              },
+              {
                 "color": "red",
-                "value": 80
+                "value": 28
               }
             ]
           },
@@ -664,12 +668,16 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green",
+                "color": "purple",
                 "value": null
               },
               {
+                "color": "green",
+                "value": 18
+              },
+              {
                 "color": "red",
-                "value": 80
+                "value": 28
               }
             ]
           },
@@ -734,12 +742,16 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green",
+                "color": "purple",
                 "value": null
               },
               {
+                "color": "green",
+                "value": 40
+              },
+              {
                 "color": "red",
-                "value": 80
+                "value": 60
               }
             ]
           },
@@ -804,12 +816,16 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green",
+                "color": "purple",
                 "value": null
               },
               {
+                "color": "green",
+                "value": 40
+              },
+              {
                 "color": "red",
-                "value": 80
+                "value": 60
               }
             ]
           },
@@ -961,6 +977,6 @@
   "timezone": "browser",
   "title": "main",
   "uid": "aebqv8lca6sjka",
-  "version": 3,
+  "version": 5,
   "weekStart": ""
 }
