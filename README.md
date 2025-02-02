@@ -13,6 +13,7 @@ docker compose up -d
 
 features.
 * 4時間空けなければいけない薬を服用したとき、amazon dash button によってそれを記録してメトリクス化し、Grafana上で「あと何時間で次の服用か」を表示する
+* switchbot-exporter による温湿度取得と、その表示
 
 ops.
 * 系の監視のページングはDiscordに対して行なう
