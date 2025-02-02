@@ -43,6 +43,7 @@ services:
     environment:
       - GF_AUTH_ANONYMOUS_ENABLED=true
       - GF_AUTH_ANONYMOUS_anonymous_ORG_ROLE=Viewer
+      - GF_INSTALL_PLUGINS=grafana-clock-panel
     volumes:
      - './grafana/datasources:/etc/grafana/provisioning/datasources'
      - './grafana/dashboard-settings:/etc/grafana/provisioning/dashboards'
