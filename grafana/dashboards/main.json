@@ -120,7 +120,7 @@
               }
             ]
           },
-          "unit": "dateTimeAsLocal"
+          "unit": "dateTimeAsLocalNoDateIfToday"
         },
         "overrides": []
       },
