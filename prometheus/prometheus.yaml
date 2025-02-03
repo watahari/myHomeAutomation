@@ -16,12 +16,9 @@ scrape_configs:
   - job_name: 'prometheus'
     static_configs:
       - targets:
-        -  prometheus:9090
-        -  node-exporter:9100
-        -  prometheus-dyson-exporter:9672
-  - job_name: 'simple-last-time-api-last-tooked-medicine'
-    static_configs:
-      - targets:
+        - prometheus:9090
+        - node-exporter:9100
+        - prometheus-dyson-exporter:9672
         - simple-last-time-api-last-tooked-medicine:8080
   - job_name: 'switchbot'
     scrape_interval: 5m # not to reach API rate limit
