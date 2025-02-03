@@ -91,3 +91,21 @@ services:
     restart: always
     ports:
       - 8081:8080
+
+  prometheus-dyson-exporter:
+    # image: zkhcohen/prometheus-dyson-exporter:latest
+    #   is not support linux/amd64
+    #   uses old libdyson
+    image: watahari/prometheus-dyson-exporter:libdyson-neon-test
+    container_name: prometheus-dyson-exporter
+    ports:
+      - "9672:9672"
+    environment:
+      - EXPORTER_PORT
+      - EXPORTER_LOG_LEVEL
+      - CONFIG_PATH
+      - DYSON_SERIAL
+      - DYSON_CREDENTIAL
+      - DYSON_DEVICE_TYPE
+      - DYSON_IP
+    restart: always
