@@ -484,6 +484,19 @@
           "legendFormat": "{{device_name}}",
           "range": true,
           "refId": "A"
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "PBFA97CFB590B2093"
+          },
+          "editorMode": "code",
+          "expr": "temperature - 273.15",
+          "hide": false,
+          "instant": false,
+          "legendFormat": "{{job}}",
+          "range": true,
+          "refId": "B"
         }
       ],
       "title": "気温",
@@ -578,6 +591,19 @@
           "legendFormat": "{{device_name}}",
           "range": true,
           "refId": "A"
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "PBFA97CFB590B2093"
+          },
+          "editorMode": "code",
+          "expr": "humidity",
+          "hide": false,
+          "instant": false,
+          "legendFormat": "{{job}}",
+          "range": true,
+          "refId": "B"
         }
       ],
       "title": "湿度",
@@ -981,6 +1007,6 @@
   "timezone": "browser",
   "title": "main",
   "uid": "aebqv8lca6sjka",
-  "version": 6,
+  "version": 7,
   "weekStart": ""
 }
