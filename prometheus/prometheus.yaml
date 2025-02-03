@@ -18,6 +18,7 @@ scrape_configs:
       - targets:
         -  prometheus:9090
         -  node-exporter:9100
+        -  prometheus-dyson-exporter:9672
   - job_name: 'simple-last-time-api-last-tooked-medicine'
     static_configs:
       - targets:
