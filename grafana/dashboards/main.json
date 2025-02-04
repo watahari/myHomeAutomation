@@ -650,7 +650,7 @@
       "id": 11,
       "options": {
         "colorMode": "value",
-        "graphMode": "area",
+        "graphMode": "none",
         "justifyMode": "auto",
         "orientation": "auto",
         "percentChangeColorMode": "standard",
@@ -673,7 +673,7 @@
             "uid": "PBFA97CFB590B2093"
           },
           "editorMode": "code",
-          "expr": "switchbot_meter_temperature{device_name=\"Switchbot Hub 2\"}",
+          "expr": "round(switchbot_meter_temperature{device_name=\"Switchbot Hub 2\"})",
           "instant": false,
           "legendFormat": "__auto",
           "range": true,
@@ -724,7 +724,7 @@
       "id": 12,
       "options": {
         "colorMode": "value",
-        "graphMode": "area",
+        "graphMode": "none",
         "justifyMode": "auto",
         "orientation": "auto",
         "percentChangeColorMode": "standard",
@@ -798,7 +798,7 @@
       "id": 13,
       "options": {
         "colorMode": "value",
-        "graphMode": "area",
+        "graphMode": "none",
         "justifyMode": "auto",
         "orientation": "auto",
         "percentChangeColorMode": "standard",
@@ -821,7 +821,7 @@
             "uid": "PBFA97CFB590B2093"
           },
           "editorMode": "code",
-          "expr": "switchbot_meter_temperature{device_name=\"防水温湿度計\"}",
+          "expr": "round(switchbot_meter_temperature{device_name=\"防水温湿度計\"})",
           "instant": false,
           "legendFormat": "__auto",
           "range": true,
@@ -872,7 +872,7 @@
       "id": 14,
       "options": {
         "colorMode": "value",
-        "graphMode": "area",
+        "graphMode": "none",
         "justifyMode": "auto",
         "orientation": "auto",
         "percentChangeColorMode": "standard",
@@ -1007,6 +1007,6 @@
   "timezone": "browser",
   "title": "main",
   "uid": "aebqv8lca6sjka",
-  "version": 7,
+  "version": 8,
   "weekStart": ""
 }
