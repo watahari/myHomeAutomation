@@ -372,7 +372,7 @@
             "uid": "PBFA97CFB590B2093"
           },
           "editorMode": "code",
-          "expr": "changes(last_posted_unixtime_seconds[7d])",
+          "expr": "changes(last_posted_unixtime_seconds{job=\"prometheus\"}[7d])",
           "instant": false,
           "legendFormat": "__auto",
           "range": true,
@@ -673,7 +673,7 @@
             "uid": "PBFA97CFB590B2093"
           },
           "editorMode": "code",
-          "expr": "round(switchbot_meter_temperature{device_name=\"Switchbot Hub 2\"})",
+          "expr": "(scalar(switchbot_meter_temperature{device_name=\"Switchbot Hub 2\"})+scalar(temperature - 273.15))/2",
           "instant": false,
           "legendFormat": "__auto",
           "range": true,
@@ -747,7 +747,7 @@
             "uid": "PBFA97CFB590B2093"
           },
           "editorMode": "code",
-          "expr": "switchbot_meter_humidity{device_name=\"Switchbot Hub 2\"}",
+          "expr": "(scalar(switchbot_meter_humidity{device_name=\"Switchbot Hub 2\"}) + scalar(humidity))/2",
           "instant": false,
           "legendFormat": "__auto",
           "range": true,
@@ -821,7 +821,7 @@
             "uid": "PBFA97CFB590B2093"
           },
           "editorMode": "code",
-          "expr": "round(switchbot_meter_temperature{device_name=\"防水温湿度計\"})",
+          "expr": "switchbot_meter_temperature{device_name=\"防水温湿度計\"}",
           "instant": false,
           "legendFormat": "__auto",
           "range": true,
@@ -1007,6 +1007,6 @@
   "timezone": "browser",
   "title": "main",
   "uid": "aebqv8lca6sjka",
-  "version": 8,
+  "version": 9,
   "weekStart": ""
 }
