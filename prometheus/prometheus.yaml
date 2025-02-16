@@ -33,3 +33,9 @@ scrape_configs:
         target_label: instance
       - target_label: __address__
         replacement: switchbot-exporter:8080
+  - job_name: amedas
+    # データの出典: amedas_exporter （ https://amedas.miiton.dev/ ）
+    scrape_interval: 400s # must:200<interval, recommend:600>interval
+    static_configs:
+      - targets:
+        - amedas.miiton.dev
