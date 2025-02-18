@@ -18,7 +18,7 @@
   "editable": true,
   "fiscalYearStartMonth": 0,
   "graphTooltip": 0,
-  "id": 5,
+  "id": 7,
   "links": [],
   "panels": [
     {
@@ -504,7 +504,7 @@
             "uid": "PBFA97CFB590B2093"
           },
           "editorMode": "code",
-          "expr": "amedas_temperature{name=\"$location\"}",
+          "expr": "avg_over_time(amedas_temperature{name=\"$location\"}[10m])",
           "hide": false,
           "instant": false,
           "legendFormat": "アメダス{{name_kanji}}",
@@ -624,7 +624,7 @@
             "uid": "PBFA97CFB590B2093"
           },
           "editorMode": "code",
-          "expr": "amedas_humidity{name=\"$location\"}",
+          "expr": "avg_over_time(amedas_humidity{name=\"$location\"}[10m])",
           "hide": false,
           "instant": false,
           "legendFormat": "アメダス{{name_kanji}}",
@@ -1016,7 +1016,7 @@
             "uid": "PBFA97CFB590B2093"
           },
           "editorMode": "code",
-          "expr": "amedas_normal_pressure{name=\"$location\"}",
+          "expr": "avg_over_time(amedas_normal_pressure{name=\"$location\"}[10m])",
           "instant": false,
           "legendFormat": "アメダス{{name_kanji}}",
           "range": true,
@@ -1114,7 +1114,7 @@
             "uid": "PBFA97CFB590B2093"
           },
           "editorMode": "code",
-          "expr": "amedas_precipitation_10m{name=\"$location\"}",
+          "expr": "avg_over_time(amedas_precipitation_10m{name=\"$location\"}[10m])",
           "instant": false,
           "legendFormat": "アメダス{{name_kanji}}",
           "range": true,
