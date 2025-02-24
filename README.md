@@ -22,8 +22,12 @@ docker compose up -d
     * zkhcohen/prometheus-dyson-exporter
 * amedas\_exporter による観測情報の表示
     * データの出典: amedas\_exporter （ https://amedas.miiton.dev/ ）
+* GCalJSON と Grafana Business Calendar を利用した家庭内スケジュールの表示
+    * https://github.com/watahari/GCalJSON
+    * https://grafana.com/grafana/plugins/marcusolsson-calendar-panel/
 
 ![実行例](./docs/sample.png)
+![実行例](./docs/sample2.jpg)
 
 ## ops.
 * 系の監視のページングはDiscordに対して行なう
