@@ -18,9 +18,22 @@
   "editable": true,
   "fiscalYearStartMonth": 0,
   "graphTooltip": 0,
-  "id": 7,
+  "id": 2,
   "links": [],
   "panels": [
+    {
+      "collapsed": false,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 0
+      },
+      "id": 19,
+      "panels": [],
+      "title": "Medicine",
+      "type": "row"
+    },
     {
       "datasource": {
         "type": "prometheus",
@@ -60,7 +73,7 @@
         "h": 6,
         "w": 8,
         "x": 0,
-        "y": 0
+        "y": 1
       },
       "id": 1,
       "options": {
@@ -78,7 +91,7 @@
         "showThresholdMarkers": true,
         "sizing": "auto"
       },
-      "pluginVersion": "11.5.0",
+      "pluginVersion": "11.5.2",
       "targets": [
         {
           "datasource": {
@@ -135,7 +148,7 @@
         "h": 3,
         "w": 8,
         "x": 8,
-        "y": 0
+        "y": 1
       },
       "id": 8,
       "options": {
@@ -155,7 +168,7 @@
         "textMode": "value",
         "wideLayout": true
       },
-      "pluginVersion": "11.5.0",
+      "pluginVersion": "11.5.2",
       "targets": [
         {
           "datasource": {
@@ -187,7 +200,7 @@
         "h": 6,
         "w": 8,
         "x": 16,
-        "y": 0
+        "y": 1
       },
       "id": 10,
       "options": {
@@ -275,7 +288,7 @@
         "h": 3,
         "w": 5,
         "x": 8,
-        "y": 3
+        "y": 4
       },
       "id": 7,
       "options": {
@@ -295,7 +308,7 @@
         "textMode": "value",
         "wideLayout": true
       },
-      "pluginVersion": "11.5.0",
+      "pluginVersion": "11.5.2",
       "targets": [
         {
           "datasource": {
@@ -344,7 +357,7 @@
         "h": 3,
         "w": 3,
         "x": 13,
-        "y": 3
+        "y": 4
       },
       "id": 9,
       "options": {
@@ -364,7 +377,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "11.5.0",
+      "pluginVersion": "11.5.2",
       "targets": [
         {
           "datasource": {
@@ -388,7 +401,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 6
+        "y": 7
       },
       "id": 3,
       "panels": [],
@@ -456,7 +469,7 @@
         "h": 8,
         "w": 8,
         "x": 0,
-        "y": 7
+        "y": 8
       },
       "id": 2,
       "options": {
@@ -475,7 +488,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "11.5.0",
+      "pluginVersion": "11.5.2",
       "targets": [
         {
           "editorMode": "code",
@@ -576,7 +589,7 @@
         "h": 8,
         "w": 8,
         "x": 8,
-        "y": 7
+        "y": 8
       },
       "id": 4,
       "options": {
@@ -595,7 +608,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "11.5.0",
+      "pluginVersion": "11.5.2",
       "targets": [
         {
           "editorMode": "code",
@@ -671,7 +684,7 @@
         "h": 4,
         "w": 4,
         "x": 16,
-        "y": 7
+        "y": 8
       },
       "id": 11,
       "options": {
@@ -691,7 +704,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "11.5.0",
+      "pluginVersion": "11.5.2",
       "targets": [
         {
           "datasource": {
@@ -745,7 +758,7 @@
         "h": 4,
         "w": 4,
         "x": 20,
-        "y": 7
+        "y": 8
       },
       "id": 12,
       "options": {
@@ -765,7 +778,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "11.5.0",
+      "pluginVersion": "11.5.2",
       "targets": [
         {
           "datasource": {
@@ -819,7 +832,7 @@
         "h": 4,
         "w": 4,
         "x": 16,
-        "y": 11
+        "y": 12
       },
       "id": 13,
       "options": {
@@ -839,7 +852,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "11.5.0",
+      "pluginVersion": "11.5.2",
       "targets": [
         {
           "datasource": {
@@ -893,7 +906,7 @@
         "h": 4,
         "w": 4,
         "x": 20,
-        "y": 11
+        "y": 12
       },
       "id": 14,
       "options": {
@@ -913,7 +926,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "11.5.0",
+      "pluginVersion": "11.5.2",
       "targets": [
         {
           "datasource": {
@@ -989,10 +1002,10 @@
         "overrides": []
       },
       "gridPos": {
-        "h": 7,
+        "h": 8,
         "w": 8,
         "x": 0,
-        "y": 15
+        "y": 16
       },
       "id": 16,
       "options": {
@@ -1008,7 +1021,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "11.5.0",
+      "pluginVersion": "11.5.2",
       "targets": [
         {
           "datasource": {
@@ -1087,10 +1100,10 @@
         "overrides": []
       },
       "gridPos": {
-        "h": 7,
+        "h": 8,
         "w": 8,
         "x": 8,
-        "y": 15
+        "y": 16
       },
       "id": 17,
       "options": {
@@ -1106,7 +1119,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "11.5.0",
+      "pluginVersion": "11.5.2",
       "targets": [
         {
           "datasource": {
@@ -1130,7 +1143,108 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 22
+        "y": 24
+      },
+      "id": 20,
+      "panels": [],
+      "title": "Schedule",
+      "type": "row"
+    },
+    {
+      "datasource": {
+        "type": "yesoreyeram-infinity-datasource",
+        "uid": "P4496513A125DCAAD"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 14,
+        "w": 16,
+        "x": 0,
+        "y": 25
+      },
+      "id": 18,
+      "options": {
+        "annotations": false,
+        "annotationsLimit": 100,
+        "annotationsType": "",
+        "colors": "event",
+        "dateFormat": "en24",
+        "defaultView": "month",
+        "displayFields": [
+          "description",
+          "labels",
+          "links",
+          "location",
+          "text",
+          "time"
+        ],
+        "endTimeField": "end",
+        "locationLabel": "",
+        "preformattedDescription": false,
+        "quickLinks": false,
+        "scrollToTime": {
+          "hours": 0,
+          "minutes": 0
+        },
+        "showEventTooltip": false,
+        "showMonthTime": true,
+        "textField": "title",
+        "timeField": "start",
+        "timeRangeType": "default",
+        "views": [
+          "week",
+          "month"
+        ]
+      },
+      "pluginVersion": "3.9.0",
+      "targets": [
+        {
+          "columns": [],
+          "datasource": {
+            "type": "yesoreyeram-infinity-datasource",
+            "uid": "P4496513A125DCAAD"
+          },
+          "filters": [],
+          "format": "table",
+          "global_query_id": "",
+          "refId": "A",
+          "root_selector": "",
+          "source": "url",
+          "type": "json",
+          "url": "",
+          "url_options": {
+            "data": "",
+            "method": "GET"
+          }
+        }
+      ],
+      "title": "",
+      "type": "marcusolsson-calendar-panel"
+    },
+    {
+      "collapsed": false,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 39
       },
       "id": 6,
       "panels": [],
@@ -1178,7 +1292,7 @@
         "h": 8,
         "w": 8,
         "x": 0,
-        "y": 23
+        "y": 40
       },
       "id": 5,
       "options": {
@@ -1197,7 +1311,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "11.5.0",
+      "pluginVersion": "11.5.2",
       "targets": [
         {
           "editorMode": "code",

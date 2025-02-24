@@ -11,3 +11,6 @@ datasources:
       prometheusType: Prometheus
       prometheusVersion: 3.1.0
       cacheLevel: 'High'
+  - name: GCalJSON
+    type: yesoreyeram-infinity-datasource
+    url: http://pi5:8082/events
