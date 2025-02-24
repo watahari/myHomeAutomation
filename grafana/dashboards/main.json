@@ -18,7 +18,7 @@
   "editable": true,
   "fiscalYearStartMonth": 0,
   "graphTooltip": 0,
-  "id": 2,
+  "id": 4,
   "links": [],
   "panels": [
     {
@@ -1354,5 +1354,5 @@
   "title": "main",
   "uid": "aebqv8lca6sjka",
   "version": 1,
-  "weekStart": ""
+  "weekStart": "monday"
 }
