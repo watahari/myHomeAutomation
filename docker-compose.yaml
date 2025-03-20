@@ -91,10 +91,7 @@ services:
       - 8081:8080
 
   prometheus-dyson-exporter:
-    # image: zkhcohen/prometheus-dyson-exporter:latest
-    #   is not support linux/amd64
-    #   uses old libdyson
-    image: watahari/prometheus-dyson-exporter:libdyson-neon-test
+    image: zkhcohen/prometheus-dyson-exporter:latest
     container_name: prometheus-dyson-exporter
     ports:
       - "9672:9672"
