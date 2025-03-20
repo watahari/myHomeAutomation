@@ -24,9 +24,7 @@ services:
     restart: always
 
   switchbot-exporter:
-    # image: nasa9084/switchbot-exporter
-    #   is not support linux/amd64
-    image: watahari/switchbot-exporter
+    image: nasa9084/switchbot-exporter
     container_name: switchbot-exporter
     ports:
       - 9101:8080
