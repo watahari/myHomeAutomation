@@ -18,7 +18,7 @@
   "editable": true,
   "fiscalYearStartMonth": 0,
   "graphTooltip": 0,
-  "id": 4,
+  "id": 5,
   "links": [],
   "panels": [
     {
@@ -1187,6 +1187,9 @@
         "colors": "event",
         "dateFormat": "en24",
         "defaultView": "month",
+        "descriptionField": [
+          "description"
+        ],
         "displayFields": [
           "description",
           "labels",
@@ -1196,6 +1199,7 @@
           "time"
         ],
         "endTimeField": "end",
+        "locationField": "location",
         "locationLabel": "",
         "preformattedDescription": false,
         "quickLinks": false,
@@ -1209,6 +1213,7 @@
         "timeField": "start",
         "timeRangeType": "default",
         "views": [
+          "day",
           "week",
           "month"
         ]
