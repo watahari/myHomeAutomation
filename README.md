@@ -13,6 +13,8 @@ docker compose up -d
 ```
 
 ## features.
+
+### Visualization
 * 4時間空けなければいけない薬を服用したとき、amazon dash button によってそれを記録してメトリクス化し、Grafana上で「あと何時間で次の服用か」を表示する
     * nekmo/amazon-dash, grewhit25/amazon-dash
     * https://github.com/watahari/simpleLastTimeAPI
@@ -29,6 +31,11 @@ docker compose up -d
 ![実行例](./docs/sample.png)
 ![実行例](./docs/sample2.jpg)
 
+### Smart home
+
+* Homebridge
+    * 設定等は秘密情報を含むため別管理している
+
 ## ops.
 * 系の監視のページングはDiscordに対して行なう
 
@@ -40,6 +47,7 @@ app.
 * AlertManager
 * Grafana
 * some exporters & api
+* Homebridge
 
 container
 
