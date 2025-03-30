@@ -1,3 +1,6 @@
 .env
 *.swp
 .DS_Store
+
+/homebridge/*
+!/homebridge/.gitkeep
