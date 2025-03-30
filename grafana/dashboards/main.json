@@ -18,7 +18,7 @@
   "editable": true,
   "fiscalYearStartMonth": 0,
   "graphTooltip": 0,
-  "id": 5,
+  "id": 7,
   "links": [],
   "panels": [
     {
@@ -1218,7 +1218,7 @@
           "month"
         ]
       },
-      "pluginVersion": "3.9.0",
+      "pluginVersion": "3.9.1",
       "targets": [
         {
           "columns": [],
@@ -1328,6 +1328,31 @@
       ],
       "title": "機器状態",
       "type": "state-timeline"
+    },
+    {
+      "fieldConfig": {
+        "defaults": {},
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 4,
+        "x": 8,
+        "y": 40
+      },
+      "id": 21,
+      "options": {
+        "code": {
+          "language": "plaintext",
+          "showLineNumbers": false,
+          "showMiniMap": false
+        },
+        "content": "* [Homebridge](http://pi5:8581/)\n* [Prometheus](http://pi5:9090/)\n* [AlertManager](http://pi5:9093/)\n",
+        "mode": "markdown"
+      },
+      "pluginVersion": "11.5.2",
+      "title": "Link",
+      "type": "text"
     }
   ],
   "preload": false,
