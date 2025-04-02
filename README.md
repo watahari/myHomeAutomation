@@ -28,8 +28,8 @@ docker compose up -d
     * https://github.com/watahari/GCalJSON
     * https://grafana.com/grafana/plugins/marcusolsson-calendar-panel/
 
-![実行例](./docs/sample.png)
-![実行例](./docs/sample2.jpg)
+![実行例](./docs/assets/sample.png)
+![実行例](./docs/assets/sample2.jpg)
 
 ### Smart home
 
