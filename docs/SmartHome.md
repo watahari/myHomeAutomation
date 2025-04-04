@@ -3,76 +3,110 @@
 ## Control
 ```mermaid
 graph TB
-    Users ---> home
+    Family(((Family))) ---> Home
 
     subgraph Apple Home
         direction TB
-        home("Apple Home 自宅")
-        home --- homepod["Apple HomePod mini"]
-        switchbothub["SwitchBot Hub 2"]
+        Home("Apple Home 自宅")
+        Home --- Homepod["Apple HomePod mini"]
+        Switchbothub["SwitchBot Hub 2"]
 
-        home --- huehub["Hue Hub"]
-        home --- pi5hb["Homebridge @ RPi5"]
+        Home --- HueHub["Hue Hub"]
+        Home --- Pi5HB["Homebridge @ RPi5"]
 
-        homepod-- Matter ---switchbothub
+        Homepod-- Matter ---Switchbothub
+
+        Homepod-- Matter ---OnvisSW["Onvis スマートボタン HS2"]
     end
 
-    pi5hb --- irobot(("iRobot")) --- roomba["Roomba j9+"]
-    pi5hb --- tuya(("Tuya")) --- sh_uoutlet["SmartHomeコンセント"] --- fan["サーキュレーター"]
-    pi5hb --- dyson(("Dyson")) --- dysonHP["Dyson Pure Humidify+Cool (PH04)"]
+    Pi5HB --- iRobot --- Roomba["Roomba j9+"]
+    Pi5HB --- Tuya(["Tuya"]) --- SHOutlet["SmartHomeコンセント"] --- fan["サーキュレーター"]
+    Pi5HB --- Dyson(["Dyson"]) --- DysonHP["Dyson Pure Humidify+Cool (PH04)"]
 
-    switchbothub --- curtain["カーテン 第3世代"]
-    switchbothub --- sensor_out["防水温湿度計"]
-    switchbothub --- sensor_door["開閉センサー(冷蔵庫)"]
+    Switchbothub --- SWCurtain["カーテン 第3世代"]
+    Switchbothub --- SWSensorOut["防水温湿度計"]
+    Switchbothub --- SWSensorDoor["開閉センサー(冷蔵庫)"]
+    Switchbothub --- SWIRAircon["エアコン(赤外線操作)"]
 
-    subgraph lights
+    subgraph Lights
         direction TB
-        lights_living["リビングライト *4"]
-        lights_dining["ダイニングライト"]
-        lights_bedroom["寝室ライト"]
-        lights_officeroom["作業スペースライト"]
+        LightsLiving["リビングライト *4"]
+        LightsDining["ダイニングライト"]
+        LightsBedroom["寝室ライト"]
+        LightsOfficeRoom["作業スペースライト"]
+        LightsSignal["シグナル灯"]
     end
-    huehub ----- lights
+    HueHub ----- Lights
 
-    lights_living --- hue_sw["Hue ディマースイッチ"]
-    lights_dining --- ikea_sw1["IKEA TRADFRI リモコン 404.431.28"]
-    lights_bedroom --- ikea_sw2["IKEA TRADFRI リモコン 404.431.28"]
+    LightsLiving --- HueSw["Hue ディマースイッチ"]
+    LightsDining --- IkeaSw1["IKEA TRADFRI リモコン 404.431.28"]
+    LightsBedroom --- IkeaSw2["IKEA TRADFRI リモコン 404.431.28"]
 ```
 
 ## Visualization
 
 ```mermaid
 graph TB
-    Users((Users)) --view--> iPad["iPad mini"]
-    Users --view--> yod["Your Own Device"]
+    Family(((Family))) --view--> iPad["iPad mini"]
+    Family --view--> YOD["Your Own Device"]
 
-    iPad & yod --view--> Grafana
+    iPad & YOD --view--> Grafana
 
-    Users --update--> AmazonDashButtons --call--> amazon-dash
+    Family --update--> AmazonDashButtons --call--> AmazonDash["amazon-dash"]
 
     subgraph "Docker compose @ Raspberry Pi 5"
         direction TB
         Grafana --get--> Prometheus
-        Prometheus --alert--> AlertManager --alert--> AlertManagerDiscord
 
-        Prometheus --scrape--> node-exporter
-        Prometheus --scrape--> switchbot-exporter
-        Prometheus --scrape--> prometheus-dyson-exporter
-        Prometheus --scrape--> simple-last-time-api-last-tooked-medicine
+        Prometheus --scrape--> NodeExporter["node-exporter"]
+        Prometheus --scrape--> SwitchbotExporter["switchbot-exporter"]
+        Prometheus --scrape--> PrometheusDysonExporter["prometheus-dyson-exporter"]
+        Prometheus --scrape--> SimpleLastTimeApiLastTookedMedicine["simple-last-time-api-last-tooked-medicine"]
 
-        amazon-dash --update--> simple-last-time-api-last-tooked-medicine
+        AmazonDash --update--> SimpleLastTimeApiLastTookedMedicine
 
         Grafana --get--> GCalJSON
     end
 
-    switchbot-exporter --get---> switchbothub["SwitchBot Hub 2"]
-    switchbothub --- sensor_out["防水温湿度計"]
+    SwitchbotExporter --get--> Switchbothub["SwitchBot Hub 2"]
+    Switchbothub --- SWSensorOut["防水温湿度計"]
 
-    prometheus-dyson-exporter --get---> dysonHP["Dyson Pure Humidify+Cool PH04"]
+    PrometheusDysonExporter --get--> DysonHP["Dyson Pure Humidify+Cool PH04"]
+
+    subgraph external
+        Prometheus --get---> AmedasExporter["amedas.miiton.dev<br>amedas_exporter"]
+        GCalJSON --get---> GoogleCalendar([Google Calendar])
+    end
+```
+
+## Monitoring
+
+### Visualization system
+```mermaid
+graph LR
+    subgraph "Docker compose @ Raspberry Pi 5"
+        Prometheus ---> Targets["exporters"]
+        Prometheus --alert--> AlertManager --alert--> AlertManagerDiscord
+    end
 
     subgraph external
         AlertManagerDiscord --alert---> Discord
-        Prometheus --get----> amedas_exporter["amedas.miiton.dev<br>amedas_exporter"]
-        GCalJSON --get----> GoogleCalendar
     end
+
+    Discord([Discord]) ---> Ops(((Ops)))
+```
+
+### Monitoring refrigerators left open
+```mermaid
+graph LR
+    Switchbothub["SwitchBot Hub 2"]
+    Switchbothub --- SWSensorDoor["開閉センサー(冷蔵庫)"]
+    Switchbothub --> SWSwitchbotService
+    subgraph external
+        SWSwitchbotService([Switchbot]) --if 冷蔵庫が開けっ放し--> IFTTT([IFTTT])
+        IFTTT --then リビングライトの点滅--> Hue([Hue])
+    end
+    Hue --> HueHub["Hue Hub"]
+    HueHub --blink--> LightsLiving["リビングライト * 4"]
+    HueHub --blink--> LightsSignal["シグナル灯"]
 ```
