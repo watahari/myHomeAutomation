@@ -31,6 +31,7 @@ Below are devices connected to 2.4 GHz Wi-Fi
 * Tapo Camera C100
 * Sony TV BRAVIA KJ-43W730E
 * Smartlife Tap
+* Amazon Dash Buttons
 
 All other devices are connected to 5 GHz Wi-Fi.
 
