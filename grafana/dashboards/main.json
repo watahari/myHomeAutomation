@@ -712,7 +712,7 @@
             "uid": "PBFA97CFB590B2093"
           },
           "editorMode": "code",
-          "expr": "(scalar(switchbot_meter_temperature{device_name=\"Switchbot Hub 2\"})+scalar(temperature - 273.15))/2",
+          "expr": "(scalar(switchbot_meter_temperature{device_name=\"Switchbot Hub2\"})+scalar(temperature - 273.15))/2",
           "instant": false,
           "legendFormat": "__auto",
           "range": true,
@@ -786,7 +786,7 @@
             "uid": "PBFA97CFB590B2093"
           },
           "editorMode": "code",
-          "expr": "(scalar(switchbot_meter_humidity{device_name=\"Switchbot Hub 2\"}) + scalar(humidity))/2",
+          "expr": "(scalar(switchbot_meter_humidity{device_name=\"Switchbot Hub2\"}) + scalar(humidity))/2",
           "instant": false,
           "legendFormat": "__auto",
           "range": true,
@@ -1218,7 +1218,7 @@
           "month"
         ]
       },
-      "pluginVersion": "3.9.1",
+      "pluginVersion": "4.0.1",
       "targets": [
         {
           "columns": [],
@@ -1383,6 +1383,6 @@
   "timezone": "browser",
   "title": "main",
   "uid": "aebqv8lca6sjka",
-  "version": 1,
+  "version": 2,
   "weekStart": "monday"
 }
