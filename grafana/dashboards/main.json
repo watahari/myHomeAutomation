@@ -1218,7 +1218,7 @@
           "month"
         ]
       },
-      "pluginVersion": "4.0.1",
+      "pluginVersion": "4.1.0",
       "targets": [
         {
           "columns": [],
@@ -1347,7 +1347,7 @@
           "showLineNumbers": false,
           "showMiniMap": false
         },
-        "content": "* [Homebridge](http://pi5:8581/)\n* [Prometheus](http://pi5:9090/)\n* [AlertManager](http://pi5:9093/)\n",
+        "content": "##### Smart Home\n\n* [Homebridge](http://pi5:8581/)\n* [Prometheus](http://pi5:9090/)\n* [AlertManager](http://pi5:9093/)\n\n---\n\n##### Network\n* [192.168.50.1](http://192.168.50.1/)\n* [192.168.3.1](http://192.168.3.1/)\n* [172.16.255.254](http://172.16.255.254/)\n",
         "mode": "markdown"
       },
       "pluginVersion": "11.5.2",
@@ -1383,6 +1383,6 @@
   "timezone": "browser",
   "title": "main",
   "uid": "aebqv8lca6sjka",
-  "version": 2,
+  "version": 3,
   "weekStart": "monday"
 }
